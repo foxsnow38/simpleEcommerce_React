@@ -27,6 +27,9 @@ const signAccessToken = (data) => {
 
 const verifyAccessToken = (req, res, next) => {
 	const authorizationToken = req.headers["authorization"];
+	console.log(req.headers["authorization"])
+	console.log( process.env.JWT_SECRET)
+	
 	if (!authorizationToken) {
 		next(Boom.unauthorized());
 	}

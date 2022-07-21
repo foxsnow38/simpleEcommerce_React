@@ -47,3 +47,33 @@ then you totally fix your json collections open mongo db compass and create data
 
 8. ıssue finally i give up  i think other ways then i find other ways  i install other students git same gitproject  here and i take backend : https://github.com/ekiciezgi/EcommerceReactNode/archive/refs/heads/master.zip
 
+9. protected Route Had Changed so you if you want complutely understand you can look this link https://medium.com/@dennisivy/creating-protected-routes-with-react-router-v6-2c4bbaf7bc1c
+other wise 
+you can like that 
+ProtectedRoute.js
+import React from 'react'
+import {Outlet,Navigate} from "react-router-dom"
+import { useAuth } from '../context/AuthContext'
+
+function ProtectedRoute() {
+ const authContext = useAuth()
+if (!authContext.loggedIn) {
+    return(
+    <Navigate to={`/`}/>
+    )
+}
+
+return <Outlet/>
+
+}
+export default ProtectedRoute
+
+App.js
+  <Route element={<ProtectedRoute/>}>
+    <Route  path='/profile' element={<Profile/>}/>   
+    </Route>
+
+
+10. when you try to send axios.post order you need to be in login.
+
+
