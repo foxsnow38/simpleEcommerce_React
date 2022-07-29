@@ -4,14 +4,21 @@
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
     "@tanstack/react-query-devtools": "^4.0.3",
+    "antd": "^4.21.7",
     "axios": "^0.27.2",
     "formik": "^2.2.9",
     "framer-motion": "^6.5.1",
     "moment": "^2.29.4",
+    "node-sass": "^7.0.1",
+    "react-awesome-slider": "^4.1.0",
     "react-image-gallery": "^1.2.8",
     "react-query": "^3.39.2",
     "react-query-devtools": "^2.6.3",
+    "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.3.0",
+    "react-simple-image-slider": "^2.4.1",
+    "react-slideshow-image": "^4.0.4",
+    "styled-components": "^5.3.5",
     "yup": "^0.32.11"
   }
 }

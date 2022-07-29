@@ -6,9 +6,10 @@ import { Navigate ,Outlet } from 'react-router-dom'
 function ProtectedAdmin() {
 const authContext = useAuth()
 
+
   return (
     <>
-    { authContext.user?.role!=`admin`&& <Navigate to={`/`} replace={true} / >}
+    { authContext.user?.role!=`admin` &&  !authContext.isUserAdmin && <Navigate to={`/`} replace={true}/>}
 
 <Outlet/>
 

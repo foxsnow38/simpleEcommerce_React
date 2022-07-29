@@ -25,6 +25,10 @@ function Admin() {
     <Link to={`/admin/product`}>Products </Link>
 </li>
 
+<li>
+    <Link to={`/admin/new`}>Add New Product  </Link>
+</li>
+
 </ul>
 </nav>
 <Box mt="10">

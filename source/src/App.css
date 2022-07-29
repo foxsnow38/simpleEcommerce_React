@@ -1,5 +1,7 @@
 @import "~react-image-gallery/styles/css/image-gallery.css";
+@import "react-slideshow-image/dist/styles.css";
+
 
 #Content{
-  padding: 15px;
+
 }

@@ -5,9 +5,9 @@ import { Table,Thead,Tbody,Th,Tr,Td,TableCaption,Text } from '@chakra-ui/react'
 
 function AdminOrders() {
 
-const {isloading,iserr,data} =useQuery([`Admin`,`Orders`], fetchOrders)
+const {isloading,iserr,data,err} =useQuery([`Admin`,`Orders`], fetchOrders)
 if (isloading) return (<div>Loading</div>)
-if (iserr) return (<div>Err : {iserr.message}</div>)
+if (iserr) return (<div>Err : {err.message}</div>)
 
 console.log(`this is data `,data)
   return (

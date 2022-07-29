@@ -1,6 +1,6 @@
 import { createContext, useContext, useState } from "react";
 import { Spinner, Flex } from '@chakra-ui/react'
-import { fetchLogout } from "../api";
+import { fetchLogout, fetchMe } from "../api";
 const AuthContext = createContext()
 
 
@@ -9,6 +9,7 @@ const AuthProvider = ({children}) =>{
 const [user,setUser] = useState(null)
 const [loggedIn,setLoggedIn]= useState(false)
 const[loading,setLoading]= useState(false)
+const [isUserAdmin,setIsUserAdmin]=useState(false)
 
 const login =(data) =>{
     setLoggedIn(true)
@@ -22,7 +23,10 @@ const logout = async (callback) =>{
     localStorage.setItem(`access-token`,null)
     localStorage.setItem(`refresh-token`,null)
     callback()
+    setIsUserAdmin(false)
 }
+
+
 
 const values ={
 user,
@@ -32,13 +36,16 @@ loggedIn,
 login,
 loading,
 setLoading,
-logout
+logout,
+isUserAdmin,
+setIsUserAdmin
+
 
 }
 
 
 return(
-
+ 
 <div>
 
 

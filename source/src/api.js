@@ -10,6 +10,20 @@ export const fetchProduct = async (id) =>{
     const {data} =await axios.get(`http://localhost:4000/product/${id}`)
 return data
 }
+export const postProduct = async (input) =>{
+
+    const options= {
+        method:`POST`,
+        url:`http://localhost:4000/product/`,
+        headers:{
+        Authorization: `${localStorage.getItem(`access-token`)}`
+         },
+        data:{...input,photos:JSON.stringify(input.photos)}
+    }
+
+    const {data} =await axios(options)
+return data
+}
 
 export const fetchRegister= async (input) =>{
 
@@ -88,4 +102,29 @@ export const fetchOrders= async ()=>{
             const {data} =await axios(options)
             return data
 
+}
+export const deleteProduct= async (productid)=>{
+    const options= {
+        method:`DELETE`,
+        url:`http://localhost:4000/product/${productid}`,
+        headers:{
+        Authorization: `${localStorage.getItem(`access-token`)}`
+         },
+    }
+            const {data} =await axios(options)
+            return data
+}
+
+export const updateProduct = async (input,productid)=>{
+
+    const options= {
+        method:`PUT`,
+        url:`http://localhost:4000/product/${productid}`,
+        headers:{
+        Authorization: `${localStorage.getItem(`access-token`)}`
+         },
+         data:input
+    }
+            const {data} =await axios(options)
+            return data
 }

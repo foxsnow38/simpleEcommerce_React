@@ -65,7 +65,7 @@ useEffect(()=>{
     <div>
 
     
-    <Grid templateColumns='repeat(3, 1fr)' gap={4}>
+    <Grid templateColumns='repeat(6, 1fr)' gap={4}>
     {/* {result.data.pages[0].map((item,key)=>(<Card key={key} item={item} />))} */}
 {data.pages.map((group,index)=>
 <React.Fragment key={index}>
@@ -73,7 +73,7 @@ useEffect(()=>{
 {group.map((item,index)=>
 (
 <Box key={index} w={`100%`}>
-<Card item={item}/>
+<Card item={item} />
 </Box>
 
 )

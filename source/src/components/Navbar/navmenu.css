@@ -1,0 +1,164 @@
+@import url("https://rsms.me/inter/inter.css");
+html {
+  font-family: "Inter", sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: "Inter var", sans-serif;
+  }
+}
+.nav {
+  height: 150px;
+  padding: 13px;
+  padding-top: 30px;
+  align-items: baseline;
+  display: flex;
+  justify-content: space-between;
+  background-color: #1E1E1E;
+  line-height: 2px;
+}
+.nav .left {
+  display: flex;
+}
+.nav .left .menu {
+  display: flex;
+  margin-left: 40px;
+}
+.nav .left .menu li a {
+  color: #444;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 3px 16px;
+  display: block;
+  font-size: 16px;
+}
+.nav .left .menu li a:hover {
+  color: black;
+}
+.nav .right a:first-child {
+  margin-right: 5px;
+}
+.nav .logo {
+  font-family: inter;
+  font-weight: bold;
+  font-size: 36px;
+  color: white;
+}
+
+.middle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.middle .active {
+  display: block;
+}
+.middle .passive {
+  display: none;
+}
+.middle .midInputDiv .midInput {
+  size: 24;
+  font-family: inter;
+  width: 600px;
+  color: #000000;
+  height: 50px;
+}
+.middle .midInputDiv .midInput::-moz-placeholder {
+  color: #A0A0A0;
+}
+.middle .midInputDiv .midInput:-ms-input-placeholder {
+  color: #A0A0A0;
+}
+.middle .midInputDiv .midInput::placeholder {
+  color: #A0A0A0;
+}
+.middle .midCategoriesDiv {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 2;
+}
+.middle .midCategoriesDiv .midCategoriesCategoriNames {
+  width: 450px;
+  height: 50px;
+  background: white;
+}
+.middle .midCategoriesDiv .midCategories {
+  background-color: white;
+  width: 450px;
+  height: 50px;
+  overflow: hidden;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px 0px 10px;
+}
+
+.offset {
+  box-shadow: 0.3em 0.3em 0 0 var(--color), inset 0.3em 0.3em 0 0 var(--color);
+}
+.offset:hover, .offset:focus {
+  box-shadow: 0 0 0 0 var(--hover), inset 6em 3.5em 0 0 var(--hover);
+}
+
+.fill {
+  --color: #a972cb;
+  --hover: #cb72aa;
+}
+
+.pulse {
+  --color: #ef6eae;
+  --hover: #ef8f6e;
+}
+
+.close {
+  --color: #ff7f82;
+  --hover: #ffdc7f;
+}
+
+.raise {
+  --color: #ffa260;
+  --hover: #e5ff60;
+}
+
+.up {
+  --color: #e4cb58;
+  --hover: #94e458;
+}
+
+.slide {
+  --color: #8fc866;
+  --hover: #66c887;
+}
+
+.offset {
+  --color: #1E1E1E;
+  --hover: #1e1e1e;
+}
+
+button.offset {
+  color: var(--color);
+  transition: 0.25s;
+  padding: 10px;
+}
+button.offset:hover, button.offset:focus {
+  border-color: var(--hover);
+  color: #fff;
+}
+
+button {
+  background: none;
+  border: 2px solid;
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 1em 2em;
+}
+
+.categori:focus {
+  color: red;
+}/*# sourceMappingURL=navmenu.css.map */
